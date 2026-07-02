@@ -4,7 +4,63 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Super Value Supply — Leads, marketing & consulting that grow your business</title>
-<meta name="description" content="We build the lead-generation and marketing systems that fill your calendar — then we run them, so you can run your business. Leads, marketing, and consulting for businesses ready to scale." />
+<meta name="description" content="We build the lead-generation and marketing systems that fill your calendar — then we run them, so you can run your business. Leads, marketing, and consulting for contractors, home services, and local businesses ready to scale." />
+<link rel="canonical" href="https://supervaluesupply.com/" />
+<meta name="theme-color" content="#241d33" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23241d33'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial' font-size='30' font-weight='900' fill='%23f5b301' text-anchor='middle'%3ESV%3C/text%3E%3C/svg%3E" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Super Value Supply" />
+<meta property="og:title" content="Super Value Supply — Leads, marketing & consulting that grow your business" />
+<meta property="og:description" content="Done-for-you lead generation, marketing, and consulting for local businesses — measured in booked appointments and revenue, not vanity metrics." />
+<meta property="og:url" content="https://supervaluesupply.com/" />
+<meta property="og:image" content="https://supervaluesupply.com/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Super Value Supply — More customers. More money." />
+<meta name="twitter:description" content="Done-for-you lead generation, marketing, and consulting for local businesses — measured in revenue." />
+<meta name="twitter:image" content="https://supervaluesupply.com/og-image.png" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://supervaluesupply.com/#business",
+  "name": "Super Value Supply",
+  "url": "https://supervaluesupply.com/",
+  "description": "Lead generation, marketing, and growth consulting for local and service businesses — measured in booked appointments and revenue.",
+  "email": "hello@supervaluesupply.com",
+  "image": "https://supervaluesupply.com/og-image.png",
+  "priceRange": "$$",
+  "areaServed": { "@type": "Country", "name": "United States" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Growth Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lead Generation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Marketing Management" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Growth Consulting" } }
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Who do you work with?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Established local and service businesses ready to grow — contractors, home services, auto shops, med spas, and other owners who can handle more customers and want a predictable way to get them." } },
+    { "@type": "Question", "name": "How fast will I see results?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most clients have a live lead system within 30 days and start seeing qualified appointments shortly after launch. We optimize from there." } },
+    { "@type": "Question", "name": "Do you lock me into a long contract?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No long lock-ins. We earn the relationship month to month with results. If we're not moving your numbers, you're free to walk." } },
+    { "@type": "Question", "name": "What does it cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It depends on scope and which services you need. We'll give you a straight number on the strategy call — no pressure, no surprises." } },
+    { "@type": "Question", "name": "Can I just do consulting without the done-for-you work?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Some clients want the strategy and run it in-house. Others want us to build and manage everything. Both work." } }
+  ]
+}
+</script>
 
 <!-- ============================================================
      SUPER VALUE SUPPLY  •  single-file site (leads / marketing / consulting agency)
@@ -26,15 +82,19 @@
 
 <style>
   :root{
-    --paper:#f1eff5;        /* page background — faint cool lavender-white */
-    --ink:#1a1622;          /* main text — near-black, faint purple */
-    --purple:#7c3aed;       /* BRIGHT PURPLE — structure / dark bands / dark buttons */
-    --purple-deep:#4c1d95;  /* deepest purple — footer / dark panels */
-    --gold:#f5b301;         /* GOLDEN YELLOW — CTAs & accents (dark text sits on it) */
-    --gold-soft:#fdeec2;
+    /* Palette tuned for trust with cold, mostly-male local-business traffic:
+       deep indigo-navy (stability) + gold CTA (action) + warm off-white (ease)
+       + green for money/growth numbers. Was vivid purple on cool lavender. */
+    --paper:#f6f4ef;        /* page background — warm off-white, calmer than stark/cool white */
+    --ink:#1e2030;          /* main text — warm near-navy black */
+    --purple:#4a3fb5;       /* BRAND indigo — structure / accents / dark buttons (trust) */
+    --purple-deep:#201b3a;  /* deepest indigo-navy — footer / dark panels */
+    --gold:#f2b705;         /* GOLD — primary CTAs & accents (dark text sits on it) */
+    --gold-soft:#fbe9bd;
+    --growth:#1a9c62;       /* green — money / growth numbers & check marks */
     --card:#ffffff;
-    --muted:#5b5566;
-    --line:#e2dded;
+    --muted:#585a68;
+    --line:#e7e2d6;
     --maxw:1180px;
     --radius:14px;
   }
@@ -86,6 +146,7 @@
   .stat:last-child{border-right:0}
   .stat .num{font-family:"Anton",sans-serif;font-size:clamp(2.4rem,6vw,3.6rem);line-height:1;color:#fff}
   .stat .num span{color:var(--gold)}
+  .stat.rev .num span{color:#5be6a6}
   .stat .lbl{color:rgba(255,255,255,.72);text-transform:uppercase;letter-spacing:.12em;font-size:.72rem;font-weight:600;margin-top:.5rem}
 
   section.block{padding:clamp(4rem,9vw,7rem) 0}
@@ -105,7 +166,7 @@
   .card .desc{color:var(--muted);font-size:.96rem}
   .feat{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin:.4rem 0 .3rem}
   .feat li{display:flex;gap:.6rem;align-items:flex-start;font-size:.93rem;color:var(--ink)}
-  .feat li svg{width:18px;height:18px;color:var(--purple);flex:none;margin-top:.2rem}
+  .feat li svg{width:18px;height:18px;color:var(--growth);flex:none;margin-top:.2rem}
   .card .btn{width:100%;justify-content:center;margin-top:auto}
 
   /* ---------- why (dark) ---------- */
@@ -144,7 +205,7 @@
   /* ---------- FAQ ---------- */
   .faq{max-width:780px;margin:0 auto}
   .q{border-bottom:1px solid var(--line)}
-  .q button{width:100%;background:none;border:0;color:var(--ink);cursor:pointer;text-align:left;padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:"Anton",sans-serif;text-transform:uppercase;font-size:1.25rem;letter-spacing:.01em}
+  .q button{width:100%;background:none;border:0;color:var(--ink);cursor:pointer;text-align:left;padding:1.5rem 0;display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:"Inter",sans-serif;font-weight:700;font-size:1.08rem;letter-spacing:0}
   .q button .plus{color:var(--purple);font-size:1.7rem;line-height:1;transition:transform .2s;flex:none;font-family:"Inter";font-weight:400}
   .q.open button .plus{transform:rotate(45deg)}
   .q .a{max-height:0;overflow:hidden;transition:max-height .28s ease;color:var(--muted)}
@@ -166,8 +227,19 @@
   .foot-col p{color:rgba(255,255,255,.6);font-size:.92rem}
   .disclaimer{color:rgba(255,255,255,.42);font-size:.8rem;border-top:1px solid rgba(255,255,255,.14);padding-top:1.8rem;line-height:1.7}
 
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+  /* ---------- free audit form ---------- */
+  .audit-panel{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(1.8rem,4.5vw,3.2rem);box-shadow:0 18px 50px -30px rgba(26,22,34,.25)}
+  .audit-form{display:flex;flex-direction:column;gap:.9rem}
+  .audit-form label{display:block;font-weight:700;font-size:.82rem;color:var(--ink)}
+  .audit-form input,.audit-form textarea{display:block;width:100%;margin-top:.35rem;padding:.8rem .9rem;font:inherit;font-size:.95rem;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);outline:none;transition:border-color .15s}
+  .audit-form input:focus,.audit-form textarea:focus{border-color:var(--purple)}
+  .audit-form .micro-note{font-size:.78rem;color:var(--muted);text-align:center}
+  @media(max-width:860px){.audit-panel{grid-template-columns:1fr}}
+
+  .reveal{opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease}
   .reveal.in{opacity:1;transform:none}
+  /* hero is never hidden — first paint matters more than the entrance */
+  .hero .reveal{opacity:1;transform:none}
 
   @media(max-width:860px){
     .nav-links{position:fixed;inset:72px 0 auto 0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:1rem 24px 1.5rem;display:none}
@@ -222,7 +294,7 @@
       <p class="eyebrow reveal">Leads · Marketing · Consulting</p>
       <!-- EDIT: headline -->
       <h1 class="display reveal">More customers.<br><em>More money.</em></h1>
-      <p class="lead reveal">We build the lead-generation and marketing systems that fill your calendar — then we run them, so you can run your business.</p>
+      <p class="lead reveal">We build the lead-generation and marketing systems that fill your calendar — then we run them, so you can run your business. Built for contractors, home services, auto shops, med spas, and local businesses ready for more.</p>
       <div class="hero-cta reveal">
         <a class="btn btn-primary" href="#book" data-book>Book a free strategy call</a>
         <a class="btn btn-ghost" href="#services">See what we do</a>
@@ -231,13 +303,14 @@
     </div>
   </section>
 
-  <!-- ============ STAT BAND ============ -->
-  <!-- EDIT: real numbers -->
+  <!-- ============ PROMISE BAND ============ -->
+  <!-- Honest commitments (swap in real client stats here once you have them:
+       e.g. "41 booked calls in 60 days — Nassau HVAC co.") -->
   <div class="stats">
     <div class="wrap"><div class="stats-grid">
-      <div class="stat"><div class="num"><span>50</span>+</div><div class="lbl">Businesses scaled</div></div>
-      <div class="stat"><div class="num"><span>3.2x</span></div><div class="lbl">Avg return on spend</div></div>
-      <div class="stat"><div class="num"><span>30</span> days</div><div class="lbl">To first leads</div></div>
+      <div class="stat"><div class="num"><span>30</span> days</div><div class="lbl">System live in market</div></div>
+      <div class="stat"><div class="num"><span>Month</span>-to-month</div><div class="lbl">No long lock-ins</div></div>
+      <div class="stat rev"><div class="num"><span>Revenue</span></div><div class="lbl">The only metric we report</div></div>
     </div></div>
   </div>
 
@@ -370,7 +443,7 @@
         </div>
 
         <div class="calendly-inline-widget"
-             data-url="https://calendly.com/admin-supervaluesupply/30min?hide_gdpr_banner=1&primary_color=7c3aed"
+             data-url="https://calendly.com/admin-supervaluesupply/30min?hide_gdpr_banner=1&primary_color=4a3fb5"
              data-resize="true"></div>
 
         <p class="booking-fallback">Calendar not loading? <a href="https://calendly.com/admin-supervaluesupply/30min" target="_blank" rel="noopener">Open the booking page in a new tab →</a></p>
@@ -378,13 +451,38 @@
     </div>
   </section>
 
+  <!-- ============ FREE AUDIT (low-commitment lead capture) ============ -->
+  <section class="block" id="audit" style="padding-top:0">
+    <div class="wrap">
+      <div class="audit-panel reveal">
+        <div>
+          <p class="eyebrow">Not ready for a call?</p>
+          <h2 class="display" style="font-size:clamp(1.9rem,4.5vw,3rem);margin:.6rem 0 .9rem">Get a free growth audit instead.</h2>
+          <p style="color:var(--muted);max-width:44ch">Tell us what you do and where you're stuck. We'll reply by email with 3 specific things we'd fix first — no call, no pitch, yours to keep.</p>
+        </div>
+        <form class="audit-form" action="https://formsubmit.co/hello@supervaluesupply.com" method="POST">
+          <input type="hidden" name="_subject" value="Free growth audit request — supervaluesupply.com" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://supervaluesupply.com/thanks.html" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+          <label>Name<input required type="text" name="name" autocomplete="name" /></label>
+          <label>Email<input required type="email" name="email" autocomplete="email" /></label>
+          <label>What's your business?<input required type="text" name="business" placeholder="e.g. HVAC company, med spa, law firm" /></label>
+          <label>Biggest growth headache right now<textarea name="challenge" rows="3" placeholder="Slow months? Leads that don't answer? Ads that don't pay?"></textarea></label>
+          <button class="btn btn-dark" type="submit" style="width:100%;justify-content:center">Send me my free audit</button>
+          <p class="micro-note">We reply within 2 business days. No spam, no list — just the audit.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ FAQ ============ -->
-  <section class="block" id="faq" style="background:#e9e6f0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <section class="block" id="faq" style="background:#efe9df;border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
     <div class="wrap">
       <div class="sec-head center reveal"><p class="eyebrow">Questions</p><h2 class="display">FAQs</h2></div>
       <div class="faq">
         <!-- EDIT: real Q&As -->
-        <div class="q reveal"><button aria-expanded="false">Who do you work with?<span class="plus">+</span></button><div class="a"><p>Established local and service businesses ready to grow — owners who can handle more customers and want a predictable way to get them.</p></div></div>
+        <div class="q reveal"><button aria-expanded="false">Who do you work with?<span class="plus">+</span></button><div class="a"><p>Established local and service businesses ready to grow — contractors, home services, auto shops, med spas, and other owners who can handle more customers and want a predictable way to get them.</p></div></div>
         <div class="q reveal"><button aria-expanded="false">How fast will I see results?<span class="plus">+</span></button><div class="a"><p>Most clients have a live lead system within 30 days and start seeing qualified appointments shortly after launch. We optimize from there.</p></div></div>
         <div class="q reveal"><button aria-expanded="false">Do you lock me into a long contract?<span class="plus">+</span></button><div class="a"><p>No long lock-ins. We earn the relationship month to month with results. If we're not moving your numbers, you're free to walk.</p></div></div>
         <div class="q reveal"><button aria-expanded="false">What does it cost?<span class="plus">+</span></button><div class="a"><p>It depends on scope and which services you need. We'll give you a straight number on the strategy call — no pressure, no surprises.</p></div></div>
@@ -424,13 +522,13 @@
       <div class="foot-col"><h4>Services</h4><a href="#services">Leads</a><a href="#services">Marketing</a><a href="#services">Consulting</a></div>
       <div class="foot-col"><h4>Company</h4><a href="#why">Why us</a><a href="#process">Process</a><a href="#about">About</a><a href="#faq">FAQs</a></div>
       <div class="foot-col"><h4>Contact</h4>
-        <!-- EDIT: real email / phone -->
+        <!-- EDIT: add real phone as <a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a> when ready -->
         <a href="mailto:hello@supervaluesupply.com">hello@supervaluesupply.com</a>
-        <a href="tel:+10000000000">(000) 000-0000</a>
+        <a href="#audit">Free growth audit</a>
         <a href="#book" data-book>Book a call</a>
       </div>
     </div>
-    <p class="disclaimer">© <span id="yr"></span> Super Value Supply. All rights reserved. Results vary by business, market, and effort. Figures shown are illustrative.</p>
+    <p class="disclaimer">© <span id="yr"></span> Super Value Supply. All rights reserved. Results vary by business, market, and effort.</p>
   </div>
 </footer>
 
@@ -452,8 +550,10 @@
     });
   });
 
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.08});
   document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+  // safety: nothing stays invisible if the observer misfires or the user scrolls fast
+  setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in');});},2200);
 
   // Every "Book a call" button feeds the calendar in the #book section.
   // They use href="#book" so the browser smooth-scrolls there; this just
