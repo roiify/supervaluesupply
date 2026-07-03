@@ -94,10 +94,11 @@ header{position:sticky;top:0;z-index:50;background:rgba(13,27,46,.82);backdrop-f
 .spark-dot{fill:#fff;stroke:var(--amber);stroke-width:3;opacity:0;animation:pop .4s ease forwards 2.3s}
 @keyframes draw{to{stroke-dashoffset:0}}
 @keyframes pop{to{opacity:1}}
-.gc-chips{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem}
-.chip{background:rgba(13,27,46,.5);border:1px solid var(--navy-line);border-radius:11px;padding:.7rem .5rem;text-align:center}
-.chip b{display:block;font-family:"Anton",sans-serif;font-weight:400;font-size:1.25rem;color:var(--amber);line-height:1}
-.chip span{display:block;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-top:.3rem}
+.gc-funnel{display:flex;align-items:center;justify-content:space-between;gap:.4rem;
+  background:rgba(13,27,46,.5);border:1px solid var(--navy-line);border-radius:12px;padding:.85rem .9rem}
+.gc-funnel span{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.gc-funnel span.won{color:var(--amber)}
+.gc-funnel i{color:rgba(247,162,51,.6);font-style:normal;font-weight:700}
 
 /* ---------- niche marquee (amber, motion) ---------- */
 .marquee{background:linear-gradient(180deg,var(--amber),#f39415);color:var(--navy);overflow:hidden;padding:.9rem 0;
@@ -130,6 +131,12 @@ section.block{padding:clamp(4rem,9vw,7rem) 0}
 .feat li{display:flex;gap:.6rem;align-items:flex-start;font-size:.93rem;color:var(--ink)}
 .feat li svg{width:18px;height:18px;color:var(--blue);flex:none;margin-top:.2rem}
 .card .btn{width:100%;justify-content:center;margin-top:auto}
+.card-link{margin-top:auto;padding-top:.5rem;display:inline-flex;align-items:center;gap:.45rem;
+  font-weight:800;font-size:.82rem;letter-spacing:.04em;text-transform:uppercase;color:var(--blue-deep);
+  align-self:flex-start}
+.card-link span{transition:transform .15s ease}
+.card-link:hover{text-decoration:underline;text-underline-offset:3px}
+.card-link:hover span{transform:translateX(4px)}
 
 /* ---------- why (dark, asymmetric heading-left / cards-right) ---------- */
 .why-sec{position:relative;background:var(--navy);color:#fff;overflow:hidden}
