@@ -183,13 +183,15 @@ section.block{padding:clamp(4rem,9vw,7rem) 0}
 .q .a{max-height:0;overflow:hidden;transition:max-height .28s ease;color:var(--muted)}
 .q .a p{padding:0 0 1.5rem}
 
-/* ---------- about ---------- */
-.about{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
-.about .portrait{aspect-ratio:1/1;border-radius:22px;border:1px solid var(--navy-line);overflow:hidden;
-  background:radial-gradient(120% 120% at 100% 0%,var(--navy-3),var(--navy));display:flex;align-items:center;justify-content:center}
-.about .portrait svg{width:110px;height:110px;color:var(--amber);opacity:.85}
-.about h2{font-size:clamp(2.2rem,5.5vw,3.6rem);margin-bottom:1.2rem}
-.about p{color:var(--muted);margin-bottom:1rem;font-size:1.05rem}
+/* ---------- about / belief (centered manifesto) ---------- */
+.manifesto{position:relative;text-align:center;max-width:840px;margin:0 auto;padding-top:1rem}
+.manifesto::before{content:"\201C";position:absolute;top:-2.4rem;left:50%;transform:translateX(-50%);
+  font-family:"Anton",sans-serif;font-size:9rem;line-height:1;color:var(--amber);opacity:.18;pointer-events:none}
+.manifesto .eyebrow{justify-content:center}
+.manifesto h2{font-size:clamp(2.2rem,6vw,4rem);margin:.9rem 0 1.5rem}
+.manifesto .lead-p{color:var(--ink);font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.55;max-width:40ch;margin:0 auto 1.2rem;font-weight:500}
+.manifesto .lead-p b{color:var(--blue-deep);font-weight:700}
+.manifesto p{color:var(--muted);font-size:1.05rem;max-width:58ch;margin:0 auto}
 
 footer{background:var(--navy);color:#fff;padding:4rem 0 2.5rem;border-top:3px solid var(--amber)}
 .foot-top{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
