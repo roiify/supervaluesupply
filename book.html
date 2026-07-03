@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Book a Free Strategy Call — Super Value Supply</title>
+<meta name="description" content="Book a free 30-minute strategy call with Super Value Supply. We'll map your fastest path to more customers — whether you hire us or not." />
+<link rel="canonical" href="https://supervaluesupply.com/book.html" />
+<meta name="theme-color" content="#0d1b2e" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d1b2e'/%3E%3Ctext x='32' y='45' font-family='Arial Black,Arial' font-size='30' font-weight='900' fill='%23f7a233' text-anchor='middle'%3ESV%3C/text%3E%3C/svg%3E" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Book a Free Strategy Call — Super Value Supply" />
+<meta property="og:description" content="Grab a free 30-minute strategy call. We'll map your fastest path to more customers." />
+<meta property="og:url" content="https://supervaluesupply.com/book.html" />
+<meta property="og:image" content="https://supervaluesupply.com/og-image.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html">Super Value<b>.</b>Supply</a>
+    <nav class="nav-links" id="navlinks">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#why">Why Us</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#faq">FAQs</a>
+      <a href="index.html#about">About</a>
+    </nav>
+    <div class="nav-right">
+      <a class="btn btn-primary" href="index.html">← Back to site</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="book-hero">
+    <div class="wrap">
+      <p class="eyebrow">Pick a time</p>
+      <h1 class="display">Let's fill your <em>pipeline.</em></h1>
+      <p>Book a free 30-minute strategy call. We'll map your fastest path to more customers — whether you hire us or not.</p>
+      <div class="book-assure">
+        <span>No pressure, no pitch</span>
+        <span>Straight numbers</span>
+        <span>Actionable either way</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       CALENDLY BOOKING CALENDAR  —  LIVE
+       Connected to: https://calendly.com/admin-supervaluesupply/30min
+       To point this at a different event later, change the link in the
+       data-url below AND the fallback link beneath it. Keep the
+       ?hide_gdpr_banner=1&primary_color=f7a233 tail on the data-url.
+       ========================================================= -->
+  <div class="booking-wrap">
+    <div class="calendly-inline-widget"
+         data-url="https://calendly.com/admin-supervaluesupply/30min?hide_gdpr_banner=1&primary_color=f7a233"
+         data-resize="true"></div>
+    <p class="booking-fallback">Calendar not loading? <a href="https://calendly.com/admin-supervaluesupply/30min" target="_blank" rel="noopener">Open the booking page in a new tab →</a></p>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-col">
+        <a class="logo" href="index.html" style="font-size:1.5rem;display:inline-block;margin-bottom:.8rem">Super Value<b>.</b>Supply</a>
+        <p>Leads, marketing, and consulting that grow your business — measured in revenue, not vanity metrics.</p>
+      </div>
+      <div class="foot-col"><h4>Services</h4><a href="index.html#services">Leads</a><a href="index.html#services">Marketing</a><a href="index.html#services">Consulting</a></div>
+      <div class="foot-col"><h4>Company</h4><a href="index.html#why">Why us</a><a href="index.html#process">Process</a><a href="index.html#about">About</a><a href="index.html#faq">FAQs</a></div>
+      <div class="foot-col"><h4>Contact</h4>
+        <a href="mailto:hello@supervaluesupply.com">hello@supervaluesupply.com</a>
+        <a href="index.html#audit">Free growth audit</a>
+        <a href="book.html">Book a call</a>
+      </div>
+    </div>
+    <p class="disclaimer">© <span id="yr"></span> Super Value Supply. All rights reserved. Results vary by business, market, and effort.</p>
+  </div>
+</footer>
+
+<!-- Calendly widget script (loads the inline calendar above) -->
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var mb=document.getElementById('menuBtn'), nl=document.getElementById('navlinks');
+  mb.addEventListener('click',function(){var open=nl.classList.toggle('show');mb.setAttribute('aria-expanded',open);});
+  nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nl.classList.remove('show');mb.setAttribute('aria-expanded',false);});});
+</script>
+</body>
+</html>
